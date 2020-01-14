@@ -53,19 +53,16 @@ class AcccountingList extends StatelessWidget {
     );
   }
 
+  var list = <Widget>[];
+
   @override
   Widget build(BuildContext context) {
-
+    for (var i = 0; i < 20; i++) {
+      list.add(Accounting(Icon(Icons.access_alarms), "人情 - 请客", i.toString()));
+    }
     return SingleChildScrollView(
       child: Column(
-        children: <Widget>[
-          Accounting(Icon(Icons.access_alarms), "人情 - 请客", "7.00"),
-          Accounting(Icon(Icons.access_alarms), "人情 - 请客", "7.00"),
-          Accounting(Icon(Icons.access_alarms), "人情 - 请客", "7.00"),
-          Accounting(Icon(Icons.access_alarms), "人情 - 请客", "7.00"),
-          Accounting(Icon(Icons.access_alarms), "人情 - 请客", "7.00"),
-          Accounting(Icon(Icons.access_alarms), "人情 - 请客", "7.00"),
-        ],
+        children: list,
       ),
     );
   }
